@@ -1,0 +1,229 @@
+Last login: Thu Jun 13 08:37:27 on console
+barrys-MacBook-Pro:~ barrylavin$ dotnet
+
+Usage: dotnet [options]
+Usage: dotnet [path-to-application]
+
+Options:
+  -h|--help         Display help.
+  --info            Display .NET Core information.
+  --list-sdks       Display the installed SDKs.
+  --list-runtimes   Display the installed runtimes.
+
+path-to-application:
+  The path to an application .dll file to execute.
+barrys-MacBook-Pro:~ barrylavin$ dotnet --info
+.NET Core SDK (reflecting any global.json):
+ Version:   2.2.300
+ Commit:    73efd5bd87
+
+Runtime Environment:
+ OS Name:     Mac OS X
+ OS Version:  10.14
+ OS Platform: Darwin
+ RID:         osx.10.14-x64
+ Base Path:   /usr/local/share/dotnet/sdk/2.2.300/
+
+Host (useful for support):
+  Version: 2.2.5
+  Commit:  0a3c9209c0
+
+.NET Core SDKs installed:
+  2.2.300 [/usr/local/share/dotnet/sdk]
+
+.NET Core runtimes installed:
+  Microsoft.AspNetCore.All 2.2.5 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
+  Microsoft.AspNetCore.App 2.2.5 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 2.2.5 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+
+To install additional .NET Core runtimes or SDKs:
+  https://aka.ms/dotnet-download
+barrys-MacBook-Pro:~ barrylavin$ dotnet -h
+.NET Command Line Tools (2.2.300)
+Usage: dotnet [runtime-options] [path-to-application] [arguments]
+
+Execute a .NET Core application.
+
+runtime-options:
+  --additionalprobingpath <path>     Path containing probing policy and assemblies to probe for.
+  --additional-deps <path>           Path to additional deps.json file.
+  --fx-version <version>             Version of the installed Shared Framework to use to run the application.
+  --roll-forward-on-no-candidate-fx  Roll forward on no candidate shared framework is enabled.
+
+path-to-application:
+  The path to an application .dll file to execute.
+
+Usage: dotnet [sdk-options] [command] [command-options] [arguments]
+
+Execute a .NET Core SDK command.
+
+sdk-options:
+  -d|--diagnostics  Enable diagnostic output.
+  -h|--help         Show command line help.
+  --info            Display .NET Core information.
+  --list-runtimes   Display the installed runtimes.
+  --list-sdks       Display the installed SDKs.
+  --version         Display .NET Core SDK version in use.
+
+SDK commands:
+  add               Add a package or reference to a .NET project.
+  build             Build a .NET project.
+  build-server      Interact with servers started by a build.
+  clean             Clean build outputs of a .NET project.
+  help              Show command line help.
+  list              List project references of a .NET project.
+  migrate           Migrate a project.json project to an MSBuild project.
+  msbuild           Run Microsoft Build Engine (MSBuild) commands.
+  new               Create a new .NET project or file.
+  nuget             Provides additional NuGet commands.
+  pack              Create a NuGet package.
+  publish           Publish a .NET project for deployment.
+  remove            Remove a package or reference from a .NET project.
+  restore           Restore dependencies specified in a .NET project.
+  run               Build and run a .NET project output.
+  sln               Modify Visual Studio solution files.
+  store             Store the specified assemblies in the runtime package store.
+  test              Run unit tests using the test runner specified in a .NET project.
+  tool              Install or manage tools that extend the .NET experience.
+  vstest            Run Microsoft Test Engine (VSTest) commands.
+
+Additional commands from bundled tools:
+  dev-certs         Create and manage development certificates.
+  ef                Entity Framework Core command-line tools.
+  fsi               Start F# Interactive / execute F# scripts.
+  sql-cache         SQL Server cache command-line tools.
+  user-secrets      Manage development user secrets.
+  watch             Start a file watcher that runs a command when files change.
+
+Run 'dotnet [command] --help' for more information on a command.
+barrys-MacBook-Pro:~ barrylavin$ dotnet new
+
+Welcome to .NET Core!
+---------------------
+Learn more about .NET Core: https://aka.ms/dotnet-docs
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
+
+Telemetry
+---------
+The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous and doesn't include command-line arguments. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+
+ASP.NET Core
+------------
+Successfully installed the ASP.NET Core HTTPS Development Certificate.
+To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only). For establishing trust on other platforms refer to the platform specific documentation.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+Getting ready...
+Usage: new [options]
+
+Options:
+  -h, --help          Displays help for this command.
+  -l, --list          Lists templates containing the specified name. If no name is specified, lists all templates.
+  -n, --name          The name for the output being created. If no name is specified, the name of the current directory is used.
+  -o, --output        Location to place the generated output.
+  -i, --install       Installs a source or a template pack.
+  -u, --uninstall     Uninstalls a source or a template pack.
+  --nuget-source      Specifies a NuGet source to use during install.
+  --type              Filters templates based on available types. Predefined values are "project", "item" or "other".
+  --dry-run           Displays a summary of what would happen if the given command line were run if it would result in a template creation.
+  --force             Forces content to be generated even if it would change existing files.
+  -lang, --language   Filters templates based on language and specifies the language of the template to create.
+
+
+Templates                                         Short Name         Language          Tags                                 
+----------------------------------------------------------------------------------------------------------------------------
+Console Application                               console            [C#], F#, VB      Common/Console                       
+Class library                                     classlib           [C#], F#, VB      Common/Library                       
+Unit Test Project                                 mstest             [C#], F#, VB      Test/MSTest                          
+NUnit 3 Test Project                              nunit              [C#], F#, VB      Test/NUnit                           
+NUnit 3 Test Item                                 nunit-test         [C#], F#, VB      Test/NUnit                           
+xUnit Test Project                                xunit              [C#], F#, VB      Test/xUnit                           
+Razor Page                                        page               [C#]              Web/ASP.NET                          
+MVC ViewImports                                   viewimports        [C#]              Web/ASP.NET                          
+MVC ViewStart                                     viewstart          [C#]              Web/ASP.NET                          
+ASP.NET Core Empty                                web                [C#], F#          Web/Empty                            
+ASP.NET Core Web App (Model-View-Controller)      mvc                [C#], F#          Web/MVC                              
+ASP.NET Core Web App                              webapp             [C#]              Web/MVC/Razor Pages                  
+ASP.NET Core with Angular                         angular            [C#]              Web/MVC/SPA                          
+ASP.NET Core with React.js                        react              [C#]              Web/MVC/SPA                          
+ASP.NET Core with React.js and Redux              reactredux         [C#]              Web/MVC/SPA                          
+Razor Class Library                               razorclasslib      [C#]              Web/Razor/Library/Razor Class Library
+ASP.NET Core Web API                              webapi             [C#], F#          Web/WebAPI                           
+global.json file                                  globaljson                           Config                               
+NuGet Config                                      nugetconfig                          Config                               
+Web Config                                        webconfig                            Config                               
+Solution File                                     sln                                  Solution                             
+
+Examples:
+    dotnet new mvc --auth Individual
+    dotnet new console 
+    dotnet new --help
+barrys-MacBook-Pro:~ barrylavin$ mkdir gradebook
+barrys-MacBook-Pro:~ barrylavin$ cd gradebook
+barrys-MacBook-Pro:gradebook barrylavin$ mkdir src
+barrys-MacBook-Pro:gradebook barrylavin$ mkdir test
+barrys-MacBook-Pro:gradebook barrylavin$ cd src
+barrys-MacBook-Pro:src barrylavin$ mkdir GradeBook
+barrys-MacBook-Pro:src barrylavin$ cd GradeBook
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet new console
+The template "Console Application" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on /Users/barrylavin/gradebook/src/GradeBook/GradeBook.csproj...
+  Restore completed in 336.79 ms for /Users/barrylavin/gradebook/src/GradeBook/GradeBook.csproj.
+
+Restore succeeded.
+
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet run
+Hello World!
+barrys-MacBook-Pro:GradeBook barrylavin$ cd ..\..\
+> 
+-bash: cd: ....: No such file or directory
+barrys-MacBook-Pro:GradeBook barrylavin$ 
+barrys-MacBook-Pro:GradeBook barrylavin$ cd src
+-bash: cd: src: No such file or directory
+barrys-MacBook-Pro:GradeBook barrylavin$ cd ..\
+> ..\
+> 
+-bash: cd: ....: No such file or directory
+barrys-MacBook-Pro:GradeBook barrylavin$ cd ..
+barrys-MacBook-Pro:src barrylavin$ cd ..
+barrys-MacBook-Pro:gradebook barrylavin$ code .
+-bash: code: command not found
+barrys-MacBook-Pro:gradebook barrylavin$ cd GradeBook
+-bash: cd: GradeBook: No such file or directory
+barrys-MacBook-Pro:gradebook barrylavin$ dotnet run --project src\GradeBook
+MSBUILD : error MSB1009: Project file does not exist.
+Switch: srcGradeBook
+
+The build failed. Please fix the build errors and run again.
+barrys-MacBook-Pro:gradebook barrylavin$ cd src
+barrys-MacBook-Pro:src barrylavin$ cd GradeBook
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet run
+Hello Barry!
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet restore
+  Restore completed in 45.6 ms for /Users/barrylavin/gradebook/src/GradeBook/GradeBook.csproj.
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet build
+Microsoft (R) Build Engine version 16.1.76+g14b0a930a7 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 45.71 ms for /Users/barrylavin/gradebook/src/GradeBook/GradeBook.csproj.
+  GradeBook -> /Users/barrylavin/gradebook/src/GradeBook/bin/Debug/netcoreapp2.2/GradeBook.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.06
+barrys-MacBook-Pro:GradeBook barrylavin$ dptnet bin/debug.netcoreapp2.2/gradebook.dll
+-bash: dptnet: command not found
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet bin/debug/netcoreapp2.2/GradeBook.dll
+Hello Barry!
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet run
+
+Unhandled Exception: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at GradeBook.Program.Main(String[] args) in /Users/barrylavin/gradebook/src/GradeBook/Program.cs:line 9
+barrys-MacBook-Pro:GradeBook barrylavin$ dotnet run -- Barry
+Hello, Barry !
+barrys-MacBook-Pro:GradeBook barrylavin$ 
